@@ -9,20 +9,20 @@
   </head>
   <body>
 
-    <div class="header-bar">
-      <a href="{% url 'tasks'%}">&#8592;</a>
+    <div class='header-bar'>
+      <h1>Entrar</h1>
     </div>
 
-    <div class="card-body">
-
+    <div class='card-body'>
       <form action="" method="POST">
         {% csrf_token %} {{form.as_p}}
-        <input class="button" type="submit" value="Salvar" />
+        <input class='button' type="submit" value="Entrar" />
       </form>
-
+      <p>Não possui uma conta? <a href="{% url 'register' %}">Registre-se</a></p>
     </div>
+   
     
-
+    
   </body>
 </html>
 {%endblock%}
